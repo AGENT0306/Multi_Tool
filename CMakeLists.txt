@@ -29,6 +29,9 @@ set(PROJECT_SOURCES
         notebook.h
         note.cpp
         note.h
+        SavePopUp.h
+        SavePopUp.ui
+        SavePopUp.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

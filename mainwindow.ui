@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="palette">
+    <palette>
+     <active/>
+     <inactive/>
+     <disabled/>
+    </palette>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>800</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="navigator">
+     <widget class="QPushButton" name="startNoteTaker">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>200</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Terminal</family>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>NoteTaker</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startCalculator">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>200</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Terminal</family>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Calculator</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="notetaker">
+     <property name="palette">
+      <palette>
+       <active/>
+       <inactive/>
+       <disabled/>
+      </palette>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

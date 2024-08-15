@@ -1,24 +1,24 @@
 #include "notebook.h"
-#include "ui_notebook.h"
 #include "QDebug"
-#include <qstring.h>
-#include <iostream>
+#include "ui_notebook.h"
 #include <fstream>
+#include <iostream>
+#include <qstring.h>
 
 using namespace std;
 
-NoteBook::NoteBook(MainWindow *test,QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::NoteBook)
+NoteBook::NoteBook(MainWindow *test, QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::NoteBook)
 {
     ui->setupUi(this);
 
     mainWin = test;
 
-    connect(ui->saveNote,SIGNAL(released()),this,SLOT(savepressed()));
-    connect(ui->clearNote,SIGNAL(released()),this,SLOT(clearpressed()));
-    connect(ui->goBack,SIGNAL(released()),this,SLOT(backpressed()));
-    connect(ui->openFile,SIGNAL(released()),this,SLOT(openpressed()));
+    connect(ui->saveNote, SIGNAL(released()), this, SLOT(savepressed()));
+    connect(ui->clearNote, SIGNAL(released()), this, SLOT(clearpressed()));
+    connect(ui->goBack, SIGNAL(released()), this, SLOT(backpressed()));
+    connect(ui->openFile, SIGNAL(released()), this, SLOT(openpressed()));
 }
 
 NoteBook::~NoteBook()
@@ -26,25 +26,26 @@ NoteBook::~NoteBook()
     delete ui;
 }
 
-void NoteBook::savepressed(){
+void NoteBook::savepressed()
+{
     popWin->show();
     QString currentText = ui->textEdit->toPlainText();
     string text = currentText.toStdString();
     popWin->getTxtFromWin(&text);
 }
 
-void NoteBook::clearpressed(){
+void NoteBook::clearpressed()
+{
     ui->textEdit->clear();
 }
 
-void NoteBook::backpressed(){
+void NoteBook::backpressed()
+{
     mainWin->show();
     this->close();
 }
 
-void NoteBook::openpressed(){
-
-}
+void NoteBook::openpressed() {}
 
 /*void NoteBook::saveToFile(string text)
 {
@@ -59,9 +60,9 @@ void NoteBook::openpressed(){
     txtfile.close();
 }*/
 
-string NoteBook::openFile(){
+string NoteBook::openFile()
+{
     //qDebug << "it worked bro its open!";
 
     return "0";
 }
-

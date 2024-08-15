@@ -1,18 +1,18 @@
 #include "savepopup.h"
-#include "ui_savepopup.h"
-#include <iostream>
-#include <fstream>
 #include "QDebug"
+#include "ui_savepopup.h"
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
-SavePopUp::SavePopUp(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::SavePopUp)
+SavePopUp::SavePopUp(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::SavePopUp)
 {
     ui->setupUi(this);
 
-    connect(ui->pushButton,SIGNAL(released()),this,SLOT(donePressed()));
+    connect(ui->pushButton, SIGNAL(released()), this, SLOT(donePressed()));
 }
 
 SavePopUp::~SavePopUp()
@@ -20,13 +20,15 @@ SavePopUp::~SavePopUp()
     delete ui;
 }
 
-void SavePopUp::donePressed(){
-    if(ui->textEdit->toPlainText() == " "){
+void SavePopUp::donePressed()
+{
+    if (ui->textEdit->toPlainText() == " ") {
         ;
-    }else{
+    } else {
         string noteName = ui->textEdit->toPlainText().toStdString();
         ofstream file;
-        file.open("C:\\Personal Coding Projects\\QtStuff\\Multi_Tool\\"+noteName+".txt", ios_base::app);
+        file.open("C:\\Personal Coding Projects\\QtStuff\\Multi_Tool\\" + noteName + ".txt",
+                  ios_base::app);
         //qDebug() << QString::fromStdString(*winTxt);
         file << *winTxt;
         file.close();
@@ -34,6 +36,7 @@ void SavePopUp::donePressed(){
     }
 }
 
-void SavePopUp::getTxtFromWin(std::string *noteTxt){
+void SavePopUp::getTxtFromWin(std::string *noteTxt)
+{
     winTxt = noteTxt;
 }

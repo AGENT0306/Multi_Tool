@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-5e3fdd57493db64c725a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Multi_Tool",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Multi_Tool::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Multi_Tool-Debug-23fcaa0b79fd0079de9e.json",
+					"name" : "Multi_Tool",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Multi_Tool_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Multi_Tool_autogen-Debug-5b3f9519bbe7ef6adff0.json",
+					"name" : "Multi_Tool_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Multi_Tool_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Multi_Tool_autogen_timestamp_deps-Debug-b77577f6d70090ba7284.json",
+					"name" : "Multi_Tool_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug",
+		"source" : "C:/Code Projects/Multi_Tool"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

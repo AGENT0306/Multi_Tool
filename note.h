@@ -1,8 +1,8 @@
 #ifndef NOTE_H
 #define NOTE_H
 
-#include <string>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -14,7 +14,6 @@ public:
 private:
     string noteData;
     string noteName;
-
 };
 
 #endif // NOTE_H

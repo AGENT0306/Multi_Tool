@@ -1,6 +1,6 @@
-#include "mainwindow.h"
-#include <QStackedWidget>
 #include <QApplication>
+#include <QStackedWidget>
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {

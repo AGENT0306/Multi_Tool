@@ -1,8 +1,8 @@
 #include "notetaker.h"
-#include <fstream>
+#include "QDebug"
 #include <chrono>
 #include <ctime>
-#include "QDebug"
+#include <fstream>
 
 using namespace std;
 
@@ -19,7 +19,8 @@ void notetaker::saveToFile(string text)
     outfile.close();
 }
 
-string notetaker::openFile(){
+string notetaker::openFile()
+{
     //qDebug << "it worked bro its open!";
 
     return "0";

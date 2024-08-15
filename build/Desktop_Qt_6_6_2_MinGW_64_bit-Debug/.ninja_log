@@ -1,0 +1,24 @@
+# ninja log v6
+11	658	7454542404073663	Multi_Tool_autogen/timestamp	a771d808fd1c7e8
+11	658	7454542404073663	Multi_Tool_autogen/mocs_compilation.cpp	a771d808fd1c7e8
+11	658	7454542404073663	C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/Multi_Tool_autogen/timestamp	a771d808fd1c7e8
+11	658	7454542404073663	C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/Multi_Tool_autogen/mocs_compilation.cpp	a771d808fd1c7e8
+695	1135	7454542405171296	CMakeFiles/Multi_Tool.dir/note.cpp.obj	8a4b8e6d24fd5fbd
+668	2488	7454542404895743	CMakeFiles/Multi_Tool.dir/main.cpp.obj	6e9135a473acf033
+663	2547	7454542404850499	CMakeFiles/Multi_Tool.dir/Multi_Tool_autogen/mocs_compilation.cpp.obj	1fcbbc0067733b94
+684	2562	7454542405061041	CMakeFiles/Multi_Tool.dir/calcEquLogic.cpp.obj	ccc25a3e69d0c58c
+673	2720	7454542404940796	CMakeFiles/Multi_Tool.dir/mainwindow.cpp.obj	b9beef482bb90dc7
+702	2776	7454542405231524	CMakeFiles/Multi_Tool.dir/savepopup.cpp.obj	cca37861497ecdc9
+690	2843	7454542405111247	CMakeFiles/Multi_Tool.dir/notebook.cpp.obj	1ddcb75920107bf3
+678	2862	7454542404995965	CMakeFiles/Multi_Tool.dir/calc.cpp.obj	8b79723e73852f77
+2863	3184	7454542426842782	Multi_Tool.exe	5a61c3b7129eadb7
+72	1406	7454633641640495	Multi_Tool_autogen/timestamp	a771d808fd1c7e8
+72	1406	7454633641640495	Multi_Tool_autogen/mocs_compilation.cpp	a771d808fd1c7e8
+72	1406	7454633641640495	C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/Multi_Tool_autogen/timestamp	a771d808fd1c7e8
+72	1406	7454633641640495	C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/Multi_Tool_autogen/mocs_compilation.cpp	a771d808fd1c7e8
+1415	3951	7454633644204747	CMakeFiles/Multi_Tool.dir/mainwindow.cpp.obj	b9beef482bb90dc7
+1408	4108	7454633644134513	CMakeFiles/Multi_Tool.dir/Multi_Tool_autogen/mocs_compilation.cpp.obj	1fcbbc0067733b94
+1434	4141	7454633644395353	CMakeFiles/Multi_Tool.dir/savepopup.cpp.obj	cca37861497ecdc9
+1427	4330	7454633644330140	CMakeFiles/Multi_Tool.dir/notebook.cpp.obj	1ddcb75920107bf3
+1421	4353	7454633644265053	CMakeFiles/Multi_Tool.dir/calc.cpp.obj	8b79723e73852f77
+4354	4653	7454633673590398	Multi_Tool.exe	5a61c3b7129eadb7

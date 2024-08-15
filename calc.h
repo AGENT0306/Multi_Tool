@@ -6,9 +6,10 @@
 #include "mainwindow.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui{ class calc; }
+namespace Ui {
+class calc;
+}
 QT_END_NAMESPACE
-
 
 class calc : public QMainWindow
 {

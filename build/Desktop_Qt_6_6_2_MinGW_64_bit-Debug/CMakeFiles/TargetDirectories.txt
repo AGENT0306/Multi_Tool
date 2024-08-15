@@ -1,0 +1,9 @@
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/Multi_Tool.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/Multi_Tool_autogen_timestamp_deps.dir
+C:/Code Projects/Multi_Tool/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/CMakeFiles/Multi_Tool_autogen.dir

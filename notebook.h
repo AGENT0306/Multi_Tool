@@ -15,7 +15,6 @@ class NoteBook : public QMainWindow
 
 public:
     explicit NoteBook(MainWindow *test, QWidget *parent = nullptr);
-    //void saveToFile(std::string text);
     std::string openFile();
     ~NoteBook();
 

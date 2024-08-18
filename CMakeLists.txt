@@ -19,7 +19,6 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        test.txt
         calc.h
         calc.cpp
         calc.ui
@@ -38,6 +37,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Multi_Tool
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        opennote.h opennote.cpp opennote.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Multi_Tool APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

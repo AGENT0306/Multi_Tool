@@ -46,7 +46,7 @@ void NoteBook::backpressed()
 }
 
 void NoteBook::openpressed() {
-
+    openWin->show();
 }
 
 string NoteBook::openFile()

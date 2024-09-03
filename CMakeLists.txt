@@ -32,13 +32,16 @@ set(PROJECT_SOURCES
         SavePopUp.h
         SavePopUp.ui
         SavePopUp.cpp
+        equation.h
+        equation.cpp
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Multi_Tool
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        equation.h equation.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Multi_Tool APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

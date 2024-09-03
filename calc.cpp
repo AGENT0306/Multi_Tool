@@ -1,5 +1,6 @@
 #include "calc.h"
 //#include "iostream"
+#include "equation.h"
 #include "./ui_calc.h"
 using namespace std;
 
@@ -149,10 +150,12 @@ void calc::text_enter()
     QLineEdit *line = (QLineEdit *) sender();
 
     QString currentText = line->text();
+    Equation* test = new Equation(currentText.QString::toStdString());
+    test->printData();
     //qDebug() << currentText;
-    QString answer = QString::number(calc::equLogic(currentText));
-
-    ui->label->setText(answer);
+    //QString answer = QString::number(calc::equLogic(currentText));
+    delete test;
+    //ui->label->setText(answer);
 }
 
 void calc::on_goBack_released()

@@ -16,9 +16,12 @@ public:
     ~SavePopUp();
     void getTxtFromWin(std::string *noteTxt);
 
+
 private:
     Ui::SavePopUp *ui;
-    std::string *winTxt;
+    std::string *winTxt = new std::string;
+    std::string title;
+    void createNoteFile();
 
 private slots:
     void donePressed();

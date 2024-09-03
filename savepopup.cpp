@@ -3,6 +3,8 @@
 #include "ui_savepopup.h"
 #include <fstream>
 #include <iostream>
+#include <stdlib.h>
+#include <cctype>
 
 using namespace std;
 
@@ -13,6 +15,8 @@ SavePopUp::SavePopUp(QWidget *parent)
     ui->setupUi(this);
 
     connect(ui->pushButton, SIGNAL(released()), this, SLOT(donePressed()));
+
+    ui->errorWhiteSpace->setVisible(false);
 }
 
 SavePopUp::~SavePopUp()
@@ -22,21 +26,29 @@ SavePopUp::~SavePopUp()
 
 void SavePopUp::donePressed()
 {
-    if (ui->textEdit->toPlainText() == " ") {
-        ;
-    } else {
-        string noteName = ui->textEdit->toPlainText().toStdString();
-        ofstream file;
-        file.open("C:\\Personal Coding Projects\\QtStuff\\Multi_Tool\\" + noteName + ".txt",
-                  ios_base::app);
-        //qDebug() << QString::fromStdString(*winTxt);
-        file << *winTxt;
-        file.close();
+    bool containsWhiteSpace = false;
+    title = ui->textEdit->toPlainText().toStdString();
+    for(auto ch : title){
+        if(isspace(ch) != 0){
+            ui->errorWhiteSpace->setVisible(true);
+            containsWhiteSpace = true;
+            break;
+        }
+    }
+    if(containsWhiteSpace == false){
+        createNoteFile();
         this->close();
     }
 }
 
+void SavePopUp::createNoteFile(){
+    ofstream file;
+    file.open("C:\\Personal Coding Projects\\QtStuff\\Multi_Tool\\Notes\\" + title + ".txt", ios_base::app);
+    file << *winTxt;
+    file.close();
+}
+
 void SavePopUp::getTxtFromWin(std::string *noteTxt)
 {
-    winTxt = noteTxt;
+    *winTxt = *noteTxt;
 }

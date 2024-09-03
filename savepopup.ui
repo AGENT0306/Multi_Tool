@@ -65,6 +65,24 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <string>OK</string>
     </property>
    </widget>
+   <widget class="QLabel" name="errorWhiteSpace">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Name can't contain spaces!</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

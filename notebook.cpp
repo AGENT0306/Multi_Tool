@@ -45,20 +45,9 @@ void NoteBook::backpressed()
     this->close();
 }
 
-void NoteBook::openpressed() {}
-
-/*void NoteBook::saveToFile(string text)
-{
-    auto currentTime = chrono::system_clock::now();
-    time_t time = chrono::system_clock::to_time_t(currentTime);
-    string timeNow = ctime(&time);
-    //cout << timeNow;
-    ofstream txtfile;
-    txtfile.open("C:\\Personal Coding Projects\\QtStuff\\Multi_Tool\\test.txt", ios_base::app);
-    txtfile << '\n' << "|" << '\n' << timeNow << '\n';
-    txtfile << text << '\n' << "|";
-    txtfile.close();
-}*/
+void NoteBook::openpressed() {
+    openWin->show();
+}
 
 string NoteBook::openFile()
 {

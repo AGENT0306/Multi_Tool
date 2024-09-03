@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "mainwindow.h"
 #include "savepopup.h"
+#include "OpenNote.h"
 
 namespace Ui {
 class NoteBook;
@@ -15,12 +16,12 @@ class NoteBook : public QMainWindow
 
 public:
     explicit NoteBook(MainWindow *test, QWidget *parent = nullptr);
-    //void saveToFile(std::string text);
     std::string openFile();
     ~NoteBook();
 
 private:
     SavePopUp *popWin = new SavePopUp;
+    OpenNote *openWin = new OpenNote;
     Ui::NoteBook *ui;
     MainWindow *mainWin;
 

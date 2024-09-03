@@ -16,6 +16,7 @@ private:
     std::string baseEqu;
     std::vector<char> signsInEqu;
     std::vector<int> signPos;
+    std::vector<double> equNums;
     void findSigns();
     void findNums();
 };

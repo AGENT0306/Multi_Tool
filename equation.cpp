@@ -10,6 +10,35 @@ Equation::Equation(std::string calcEqu){
     baseEqu = calcEqu;
     findSigns();
     findNums();
+    calculate();
+}
+
+void Equation::calculate(){
+    int counter = 0;
+    double num1;
+    double num2;
+    double ans;
+    std::vector<double> temp = equNums;
+    std::vector<char> tempSign = signsInEqu;
+
+    for(auto x : tempSign){
+        qDebug() << "test";
+        if(x == '*' || x == '/'){
+            num1 = temp[counter];
+            num2 = temp[counter + 1];
+            equNums.erase(equNums.begin());
+            equNums.erase(equNums.begin());
+            if(x == '*'){
+                ans = num1 * num2;
+            }else if(x == '/'){
+                ans = num1 / num2;
+            }
+            signsInEqu.erase(signsInEqu.begin() + counter);
+        }
+        counter++;
+    }
+
+
 }
 
 //Finds all signs(char) in equation and the position(int) of those signs and

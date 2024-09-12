@@ -19,6 +19,7 @@ private:
     std::vector<double> equNums;
     void findSigns();
     void findNums();
+    void calculate();
 };
 
 #endif // EQUATION_H

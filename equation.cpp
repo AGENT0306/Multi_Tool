@@ -22,22 +22,27 @@ void Equation::calculate(){
     std::vector<char> tempSign = signsInEqu;
 
     for(auto x : tempSign){
-        qDebug() << "test";
+        std::vector<double>::iterator it = equNums.begin();
+        std::vector<double>::iterator it2 = equNums.begin();
+        //qDebug() << "test";
         if(x == '*' || x == '/'){
-            num1 = temp[counter];
-            num2 = temp[counter + 1];
-            equNums.erase(equNums.begin());
-            equNums.erase(equNums.begin());
+            num1 = equNums[counter];
+            equNums.erase(it + counter);
+            num2 = equNums[counter];
+            equNums.erase(it2 + counter);
             if(x == '*'){
                 ans = num1 * num2;
+                equNums.insert(it + counter, ans);
             }else if(x == '/'){
                 ans = num1 / num2;
+                equNums.insert(it + counter, ans);
             }
             signsInEqu.erase(signsInEqu.begin() + counter);
+        }else{
+            counter++;
         }
-        counter++;
+        qDebug() << "test";
     }
-
 
 }
 

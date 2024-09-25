@@ -14,6 +14,21 @@ Equation::Equation(std::string calcEqu){
 }
 
 void Equation::calculate(){
+    calMultiDiv();
+    calAddSub();
+
+}
+
+void Equation::calAddSub(){
+    int counter = 0;
+    double num1;
+    double num2;
+    double ans;
+    std::vector<double> temp = equNums;
+    std::vector<char> tempSign = signsInEqu;
+}
+
+void Equation::calMultiDiv(){
     int counter = 0;
     double num1;
     double num2;
@@ -43,7 +58,6 @@ void Equation::calculate(){
         }
         qDebug() << "test";
     }
-
 }
 
 //Finds all signs(char) in equation and the position(int) of those signs and

@@ -20,6 +20,8 @@ private:
     void findSigns();
     void findNums();
     void calculate();
+    void calMultiDiv();
+    void calAddSub();
 };
 
 #endif // EQUATION_H

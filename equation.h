@@ -19,9 +19,9 @@ private:
     std::vector<double> equNums;
     void findSigns();
     void findNums();
-    void calculate();
-    void calMultiDiv();
-    void calAddSub();
+    void findAns();
+    void calculate(char *op1, char *op2);
+    double operations(double n1, double n2, char* op);
 };
 
 #endif // EQUATION_H

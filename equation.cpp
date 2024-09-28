@@ -10,25 +10,37 @@ Equation::Equation(std::string calcEqu){
     baseEqu = calcEqu;
     findSigns();
     findNums();
-    calculate();
+    findAns();
 }
 
-void Equation::calculate(){
-    calMultiDiv();
-    calAddSub();
-
-}
-
-void Equation::calAddSub(){
-    int counter = 0;
-    double num1;
-    double num2;
+double Equation::operations(double n1, double n2, char* op){
     double ans;
-    std::vector<double> temp = equNums;
-    std::vector<char> tempSign = signsInEqu;
+    if(*op == '*'){
+        ans = n1 * n2;
+    }else if(*op == '/'){
+        ans = n1 / n2;
+    }else if(*op == '+'){
+        ans = n1 + n2;
+    }else if(*op == '-'){
+        ans = n1 - n2;
+    }else{
+        ans = 0.0;
+    }
+
+    return ans;
 }
 
-void Equation::calMultiDiv(){
+void Equation::findAns(){
+    char plus = '+';
+    char minus = '-';
+    char times = '*';
+    char divide = '/';
+    calculate(&times, &divide);
+    calculate(&plus, &minus);
+    //calAddSub();
+}
+
+void Equation::calculate(char *op1, char *op2){
     int counter = 0;
     double num1;
     double num2;
@@ -40,16 +52,16 @@ void Equation::calMultiDiv(){
         std::vector<double>::iterator it = equNums.begin();
         std::vector<double>::iterator it2 = equNums.begin();
         //qDebug() << "test";
-        if(x == '*' || x == '/'){
+        if(x == *op1 || x == *op2){
             num1 = equNums[counter];
             equNums.erase(it + counter);
             num2 = equNums[counter];
             equNums.erase(it2 + counter);
-            if(x == '*'){
-                ans = num1 * num2;
+            if(x == *op1){
+                ans = operations(num1, num2, op1);
                 equNums.insert(it + counter, ans);
-            }else if(x == '/'){
-                ans = num1 / num2;
+            }else if(x == *op2){
+                ans = operations(num1, num2, op2);
                 equNums.insert(it + counter, ans);
             }
             signsInEqu.erase(signsInEqu.begin() + counter);

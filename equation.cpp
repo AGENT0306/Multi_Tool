@@ -13,6 +13,7 @@ Equation::Equation(std::string calcEqu){
     findAns();
 }
 
+//just performs the operation given to it on the two numbers
 double Equation::operations(double n1, double n2, char* op){
     double ans;
     if(*op == '*'){
@@ -30,6 +31,8 @@ double Equation::operations(double n1, double n2, char* op){
     return ans;
 }
 
+//this function calls the calculate function in a way to make sure
+//pemdas is followed correctly
 void Equation::findAns(){
     char plus = '+';
     char minus = '-';
@@ -37,22 +40,27 @@ void Equation::findAns(){
     char divide = '/';
     calculate(&times, &divide);
     calculate(&plus, &minus);
-    //calAddSub();
 }
 
+//this is the main calculate function, it takes in the two operators you want
+//to use for that round of calculations
 void Equation::calculate(char *op1, char *op2){
     int counter = 0;
     double num1;
     double num2;
     double ans;
-    std::vector<double> temp = equNums;
-    std::vector<char> tempSign = signsInEqu;
+    std::vector<double> temp = equNums; //copies numbers in equation for reference
+    std::vector<char> tempSign = signsInEqu; //copies signs in equation for reference
 
-    for(auto x : tempSign){
+    for(auto x : tempSign){ //iterates through all of the signs in the current equation
         std::vector<double>::iterator it = equNums.begin();
         std::vector<double>::iterator it2 = equNums.begin();
         //qDebug() << "test";
-        if(x == *op1 || x == *op2){
+        if(x == *op1 || x == *op2){ //this checks to see of the current sign being checked is
+                                    //either op1 or op2. If yes it assgins the number of the current count
+                                    //to num 1 then removes that number. Once that number is removed, the
+                                    //next number is shifted to the last numbers position (i.e. equNums[2]
+                                    //becomes equNums[1]).
             num1 = equNums[counter];
             equNums.erase(it + counter);
             num2 = equNums[counter];

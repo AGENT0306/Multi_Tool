@@ -76,7 +76,6 @@ void Equation::calculate(char *op1, char *op2){
         }else{
             counter++;
         }
-        qDebug() << "test";
     }
 }
 
@@ -119,4 +118,8 @@ void Equation::printData(){
     qDebug() << signsInEqu;
     qDebug() << signPos;
     qDebug() << equNums;
+}
+
+double Equation::getAns(){
+    return equNums[0];
 }

@@ -149,8 +149,9 @@ void calc::text_enter()
 {
     QLineEdit *line = (QLineEdit *) sender();
     QString currentText = line->text();
-    Equation* test = new Equation(currentText.QString::toStdString());
-    delete test;
+    Equation* equ = new Equation(currentText.QString::toStdString());
+    ui->label->setText(QString::number(equ->getAns()));
+    delete equ;
 }
 
 void calc::on_goBack_released()

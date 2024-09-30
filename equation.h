@@ -12,6 +12,7 @@ public:
     Equation();
     Equation(std::string calcEqu);
     void printData();
+    double getAns();
 private:
     std::string baseEqu;
     std::vector<char> signsInEqu;

@@ -22,7 +22,7 @@ set(PROJECT_SOURCES
         calc.h
         calc.cpp
         calc.ui
-        calcEquLogic.cpp
+
         notebook.ui
         notebook.cpp
         notebook.h

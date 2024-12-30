@@ -1,4 +1,4 @@
-#include "note.h"
+#include "../header_files/note.h"
 
 note::note(string data, string name)
 {

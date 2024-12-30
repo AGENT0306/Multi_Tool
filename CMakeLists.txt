@@ -15,27 +15,26 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        calc.h
-        calc.cpp
-        calc.ui
-
-        notebook.ui
-        notebook.cpp
-        notebook.h
-        note.cpp
-        note.h
-        SavePopUp.h
-        SavePopUp.ui
-        SavePopUp.cpp
-        equation.h
-        equation.cpp
-        opennote.h
-        opennote.cpp
-        opennote.ui
+        source_files/main.cpp
+        source_files/mainwindow.cpp
+        header_files/mainwindow.h
+        source_files/mainwindow.ui
+        header_files/calc.h
+        source_files/calc.cpp
+        source_files/calc.ui
+        source_files/notebook.ui
+        source_files/notebook.cpp
+        header_files/notebook.h
+        source_files/note.cpp
+        header_files/note.h
+        header_files/savepopup.h
+        source_files/savepopup.ui
+        source_files/savepopup.cpp
+        header_files/equation.h
+        source_files/equation.cpp
+        header_files/opennote.h
+        source_files/opennote.cpp
+        source_files/opennote.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -73,7 +72,9 @@ set_target_properties(Multi_Tool PROPERTIES
 
 install(TARGETS Multi_Tool
     BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Multi_Tool)

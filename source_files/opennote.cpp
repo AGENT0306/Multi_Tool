@@ -1,4 +1,4 @@
-#include "opennote.h"
+#include "../header_files/opennote.h"
 #include "ui_opennote.h"
 
 OpenNote::OpenNote(QWidget *parent)

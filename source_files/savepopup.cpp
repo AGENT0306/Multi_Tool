@@ -1,10 +1,10 @@
-#include "savepopup.h"
+#include "../header_files/savepopup.h"
 #include "QDebug"
 #include "ui_savepopup.h"
+#include <cctype>
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
-#include <cctype>
 
 using namespace std;
 
@@ -28,22 +28,24 @@ void SavePopUp::donePressed()
 {
     bool containsWhiteSpace = false;
     title = ui->textEdit->toPlainText().toStdString();
-    for(auto ch : title){
-        if(isspace(ch) != 0){
+    for (auto ch : title) {
+        if (isspace(ch) != 0) {
             ui->errorWhiteSpace->setVisible(true);
             containsWhiteSpace = true;
             break;
         }
     }
-    if(containsWhiteSpace == false){
+    if (containsWhiteSpace == false) {
         createNoteFile();
         this->close();
     }
 }
 
-void SavePopUp::createNoteFile(){
+void SavePopUp::createNoteFile()
+{
     ofstream file;
-    file.open("C:\\Personal Coding Projects\\QtStuff\\Multi_Tool\\Notes\\" + title + ".txt", ios_base::app);
+    file.open("C:\\Personal Coding Projects\\QtStuff\\Multi_Tool\\Notes\\" + title + ".txt",
+              ios_base::app);
     file << *winTxt;
     file.close();
 }

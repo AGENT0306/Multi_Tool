@@ -1,4 +1,4 @@
-#include "notebook.h"
+#include "../header_files/notebook.h"
 #include "QDebug"
 #include "ui_notebook.h"
 #include <fstream>
@@ -45,7 +45,8 @@ void NoteBook::backpressed()
     this->close();
 }
 
-void NoteBook::openpressed() {
+void NoteBook::openpressed()
+{
     openWin->show();
 }
 

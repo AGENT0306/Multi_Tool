@@ -1,7 +1,7 @@
-#include "calc.h"
+#include "../header_files/calc.h"
 //#include "iostream"
-#include "equation.h"
 #include "./ui_calc.h"
+#include "../header_files/equation.h"
 using namespace std;
 
 double firstNum;
@@ -149,7 +149,7 @@ void calc::text_enter()
 {
     QLineEdit *line = (QLineEdit *) sender();
     QString currentText = line->text();
-    Equation* equ = new Equation(currentText.QString::toStdString());
+    Equation *equ = new Equation(currentText.QString::toStdString());
     ui->label->setText(QString::number(equ->getAns()));
     delete equ;
 }

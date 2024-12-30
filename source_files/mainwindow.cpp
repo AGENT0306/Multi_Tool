@@ -1,8 +1,8 @@
-#include "mainwindow.h"
+#include "../header_files/mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "QDebug"
-#include "calc.h"
-#include "notebook.h"
+#include "../header_files/calc.h"
+#include "../header_files/notebook.h"
 #include <fstream>
 #include <iostream>
 #include <qstring.h>

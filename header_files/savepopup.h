@@ -16,7 +16,6 @@ public:
     ~SavePopUp();
     void getTxtFromWin(std::string *noteTxt);
 
-
 private:
     Ui::SavePopUp *ui;
     std::string *winTxt = new std::string;

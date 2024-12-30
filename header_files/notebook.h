@@ -2,9 +2,9 @@
 #define NOTEBOOK_H
 
 #include <QMainWindow>
+#include "opennote.h"
 #include "mainwindow.h"
 #include "savepopup.h"
-#include "OpenNote.h"
 
 namespace Ui {
 class NoteBook;

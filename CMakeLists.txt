@@ -41,6 +41,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Multi_Tool
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+            "C:/Coding_Projects/C++/Qt/Multi_Tool/pugiXML/pugixml.cpp"
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Multi_Tool APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -61,6 +62,14 @@ else()
 endif()
 
 target_link_libraries(Multi_Tool PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+
+target_include_directories(Multi_Tool PUBLIC
+        "${PROJECT_BINARY_DIR}/pugiXML"
+)
+
+target_link_directories(Multi_Tool PUBLIC
+        "${PROJECT_BINARY_DIR}/pugiXML"
+)
 
 set_target_properties(Multi_Tool PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

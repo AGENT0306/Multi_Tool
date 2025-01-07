@@ -13,6 +13,9 @@ NoteBook::NoteBook(MainWindow *test, QWidget *parent)
 {
     ui->setupUi(this);
 
+    doc = new pugi::xml_document();
+    doc->load_file("C:/Coding_Projects/C++/Qt/Multi_Tool/notes.xml");
+
     mainWin = test;
 
     connect(ui->saveNote, SIGNAL(released()), this, SLOT(savepressed()));
@@ -43,6 +46,7 @@ void NoteBook::backpressed()
 {
     mainWin->show();
     this->close();
+    //delete this; //will test if this actually deletes object later
 }
 
 void NoteBook::openpressed()

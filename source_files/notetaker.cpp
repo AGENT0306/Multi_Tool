@@ -1,4 +1,4 @@
-#include "notetaker.h"
+#include "../header_files/notetaker.h"
 #include "QDebug"
 #include <chrono>
 #include <ctime>

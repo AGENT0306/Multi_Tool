@@ -5,6 +5,7 @@
 #include "opennote.h"
 #include "mainwindow.h"
 #include "savepopup.h"
+#include "pugiXML/pugixml.hpp"
 
 namespace Ui {
 class NoteBook;
@@ -24,6 +25,7 @@ private:
     OpenNote *openWin = new OpenNote;
     Ui::NoteBook *ui;
     MainWindow *mainWin;
+    pugi::xml_document *doc;
 
 private slots:
     void savepressed();

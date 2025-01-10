@@ -32,9 +32,8 @@ set(PROJECT_SOURCES
         source_files/savepopup.cpp
         header_files/equation.h
         source_files/equation.cpp
-        header_files/opennote.h
-        source_files/opennote.cpp
-        source_files/opennote.ui
+        header_files/noteSelector.h
+        source_files/noteSelector.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

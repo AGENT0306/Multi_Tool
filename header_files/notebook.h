@@ -2,10 +2,10 @@
 #define NOTEBOOK_H
 
 #include <QMainWindow>
-#include "opennote.h"
 #include "mainwindow.h"
 #include "savepopup.h"
 #include "pugiXML/pugixml.hpp"
+#include "../header_files/noteSelector.h"
 
 namespace Ui {
 class NoteBook;
@@ -22,10 +22,10 @@ public:
 
 private:
     SavePopUp *popWin = new SavePopUp;
-    OpenNote *openWin = new OpenNote;
     Ui::NoteBook *ui;
     MainWindow *mainWin;
     pugi::xml_document *doc;
+    NoteSelector *noteSele;
 
 private slots:
     void savepressed();

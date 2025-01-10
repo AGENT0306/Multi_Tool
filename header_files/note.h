@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <pugiXML/pugixml.hpp>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ public:
     note(string data, string name);
 
 private:
+    pugi::xml_node node;
     string noteData;
     string noteName;
 };

@@ -1,6 +1,6 @@
 #include "../header_files/notebook.h"
 #include "QDebug"
-#include "ui_notebook.h"
+#include "../source_files/ui_notebook.h"
 #include <fstream>
 #include <iostream>
 #include <qstring.h>
@@ -15,6 +15,8 @@ NoteBook::NoteBook(MainWindow *test, QWidget *parent)
 
     doc = new pugi::xml_document();
     doc->load_file("C:/Coding_Projects/C++/Qt/Multi_Tool/notes.xml");
+
+    noteSele = new NoteSelector(doc, this);
 
     mainWin = test;
 
@@ -49,9 +51,8 @@ void NoteBook::backpressed()
     //delete this; //will test if this actually deletes object later
 }
 
-void NoteBook::openpressed()
-{
-    openWin->show();
+void NoteBook::openpressed(){
+    noteSele->show();
 }
 
 string NoteBook::openFile()

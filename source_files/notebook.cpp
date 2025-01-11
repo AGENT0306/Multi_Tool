@@ -3,6 +3,7 @@
 #include "../source_files/ui_notebook.h"
 #include <fstream>
 #include <iostream>
+#include <iso646.h>
 #include <qstring.h>
 
 using namespace std;
@@ -17,6 +18,7 @@ NoteBook::NoteBook(MainWindow *test, QWidget *parent)
     doc->load_file("C:/Coding_Projects/C++/Qt/Multi_Tool/notes.xml");
 
     noteSele = new NoteSelector(doc, this);
+    noteSele->loadNotes();
 
     mainWin = test;
 

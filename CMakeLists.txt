@@ -34,6 +34,8 @@ set(PROJECT_SOURCES
         source_files/equation.cpp
         header_files/noteSelector.h
         source_files/noteSelector.cpp
+        header_files/dataCard.h
+        source_files/dataCard.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -18,6 +18,7 @@ class NoteSelector : public QMainWindow{
 
     public:
         explicit NoteSelector(pugi::xml_document* d, QWidget *parent = nullptr);
+        void loadNotes();
 
     private:
         pugi::xml_document* doc;

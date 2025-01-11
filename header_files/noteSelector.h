@@ -1,8 +1,12 @@
 //
 // Created by reitr on 1/9/2025.
 //
+#pragma once
 
 #include <QMainWindow>
+#include <QVBoxLayout>
+#include <QWidget>
+#include <QScrollArea>
 #include "pugiXML/pugixml.hpp"
 
 #ifndef NOTESELECTOR_H
@@ -17,8 +21,9 @@ class NoteSelector : public QMainWindow{
 
     private:
         pugi::xml_document* doc;
-
-
+        QScrollArea* scroll;
+        QWidget* w;
+        QVBoxLayout* layout;
 };
 
 #endif //NOTESELECTOR_H

@@ -2,8 +2,7 @@
 #define NOTEBOOK_H
 
 #include <QMainWindow>
-#include "mainwindow.h"
-#include "savepopup.h"
+#include "../header_files/savepopup.h"
 #include "pugiXML/pugixml.hpp"
 #include "../header_files/noteSelector.h"
 
@@ -16,14 +15,14 @@ class NoteBook : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit NoteBook(MainWindow *test, QWidget *parent = nullptr);
+    explicit NoteBook(QWidget *parent);
     std::string openFile();
     ~NoteBook();
 
 private:
     SavePopUp *popWin = new SavePopUp;
     Ui::NoteBook *ui;
-    MainWindow *mainWin;
+    QWidget *mainWin;
     pugi::xml_document *doc;
     NoteSelector *noteSele;
 

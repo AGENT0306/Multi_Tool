@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QString>
-#include "mainwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,12 +15,12 @@ class calc : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit calc(MainWindow *test, QWidget *parent = nullptr);
+    explicit calc(QWidget *parent);
     ~calc();
 
 private:
     Ui::calc *ui;
-    MainWindow *mainWin;
+    QWidget *mainWin;
     double equLogic(QString equation);
 
 private slots:

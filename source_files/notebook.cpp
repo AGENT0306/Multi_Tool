@@ -8,7 +8,7 @@
 
 using namespace std;
 
-NoteBook::NoteBook(MainWindow *test, QWidget *parent)
+NoteBook::NoteBook(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::NoteBook)
 {
@@ -20,7 +20,7 @@ NoteBook::NoteBook(MainWindow *test, QWidget *parent)
     noteSele = new NoteSelector(doc, this);
     noteSele->loadNotes();
 
-    mainWin = test;
+    mainWin = parent;
 
     connect(ui->saveNote, SIGNAL(released()), this, SLOT(savepressed()));
     connect(ui->clearNote, SIGNAL(released()), this, SLOT(clearpressed()));

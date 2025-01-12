@@ -6,13 +6,13 @@ using namespace std;
 
 double firstNum;
 
-calc::calc(MainWindow *test, QWidget *parent)
+calc::calc(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::calc)
 {
     ui->setupUi(this);
 
-    mainWin = test;
+    mainWin = parent;
 
     connect(ui->pushButton_0, SIGNAL(released()), this, SLOT(digit_pressed()));
     connect(ui->pushButton_1, SIGNAL(released()), this, SLOT(digit_pressed()));

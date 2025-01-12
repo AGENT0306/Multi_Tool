@@ -1,10 +1,6 @@
 #include "../header_files/mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "QDebug"
-#include "../header_files/calc.h"
-#include "../header_files/notebook.h"
-#include <fstream>
-#include <iostream>
 #include <qstring.h>
 
 using namespace std;
@@ -14,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    n = new NoteBook(this);
+    c = new calc(this);
 
     connect(ui->startNoteTaker, SIGNAL(released()), this, SLOT(noteTakerpressed()));
     connect(ui->startCalculator, SIGNAL(released()), this, SLOT(startCalcpressed()));
@@ -26,19 +25,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::noteTakerpressed()
 {
-    /*QWidget * notetaker = ui->notetaker;
-   ui->stackedWidget->setCurrentWidget(notetaker);*/
-    NoteBook *n = new NoteBook(this);
     n->show();
-    this->close();
+    this->hide();
     n->setWindowTitle("NoteTaker");
 }
 
 void MainWindow::startCalcpressed()
 {
-    calc *c = new calc(this);
-    //qDebug() << "test";
     c->show();
-    this->close();
+    this->hide();
     c->setWindowTitle("Calculator");
 }

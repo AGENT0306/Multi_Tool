@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "../header_files/calc.h"
+#include "../header_files/notebook.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,9 +18,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    MainWindow *test;
 
 private:
+    calc *c;
+    NoteBook *n;
     Ui::MainWindow *ui;
 
 private slots:

@@ -7,6 +7,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QScrollArea>
+#include "../header_files/dataCard.h"
 #include "pugiXML/pugixml.hpp"
 
 #ifndef NOTESELECTOR_H
@@ -22,9 +23,13 @@ class NoteSelector : public QMainWindow{
 
     private:
         pugi::xml_document* doc;
+        QWidget *mainWin;
         QScrollArea* scroll;
         QWidget* w;
         QVBoxLayout* layout;
+
+private slots:
+    void notePressed();
 };
 
 #endif //NOTESELECTOR_H

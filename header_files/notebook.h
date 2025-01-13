@@ -16,7 +16,7 @@ class NoteBook : public QMainWindow
 
 public:
     explicit NoteBook(QWidget *parent);
-    std::string openFile();
+    void openFile();
     ~NoteBook();
 
 private:

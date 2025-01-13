@@ -6,9 +6,13 @@
 #ifndef DATACARD_H
 #define DATACARD_H
 
+#include <QPushButton>
 #include <QWidget>
 
-class DataCard : public QWidget {
+class DataCard : public QPushButton {
+
+    Q_OBJECT
+
 public:
     explicit DataCard(std::string nT, std::string nD, std::string nC, QWidget *parent = nullptr);
 

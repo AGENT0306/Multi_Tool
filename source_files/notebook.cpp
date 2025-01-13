@@ -57,9 +57,6 @@ void NoteBook::openpressed(){
     noteSele->show();
 }
 
-string NoteBook::openFile()
-{
-    //qDebug << "it worked bro its open!";
-
-    return "0";
+void NoteBook::openFile(){
+    std::cout << "test";
 }

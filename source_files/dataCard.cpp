@@ -5,7 +5,7 @@
 
 #include <QLabel>
 
-DataCard::DataCard(std::string nT, std::string nD, std::string nC, QWidget *parent) : QWidget(parent){
+DataCard::DataCard(std::string nT, std::string nD, std::string nC, QWidget *parent) : QPushButton(parent){
     nTitle = &nT;
     nDate = &nD;
     nContent = &nC;
@@ -13,7 +13,7 @@ DataCard::DataCard(std::string nT, std::string nD, std::string nC, QWidget *pare
     this->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
     this->setGeometry(0,0,600,100);
 
-    QLabel *lTitle, *lDate, *lContent;
+    QLabel *lTitle, *lDate;
 
     lTitle = new QLabel(this);
     lTitle->setText(QString::fromStdString(*nTitle));
@@ -23,8 +23,4 @@ DataCard::DataCard(std::string nT, std::string nD, std::string nC, QWidget *pare
     lDate = new QLabel(this);
     lDate->setText(QString::fromStdString(*nDate));
     lDate->setGeometry(200,50,100,20);
-
-    lContent = new QLabel(this);
-    lContent->setText(QString::fromStdString(*nContent));
-    lContent->setGeometry(400,50,100,20);
 }

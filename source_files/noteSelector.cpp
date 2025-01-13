@@ -9,11 +9,12 @@
 
 NoteSelector::NoteSelector(pugi::xml_document* d, QWidget *parent) : QMainWindow(parent){
     doc = d;
+    this->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     this->setGeometry(100,100,700,500);
 
     scroll = new QScrollArea(this);
     scroll->setWidgetResizable(true);
-    scroll->setGeometry(QRect(0,0,600,400));
+    scroll->setGeometry(QRect(0,0,700,500));
 
     w = new QWidget();
     scroll->setWidget(w);

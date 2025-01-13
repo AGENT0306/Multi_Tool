@@ -25,8 +25,6 @@ set(PROJECT_SOURCES
         source_files/notebook.ui
         source_files/notebook.cpp
         header_files/notebook.h
-        source_files/note.cpp
-        header_files/note.h
         header_files/savepopup.h
         source_files/savepopup.ui
         source_files/savepopup.cpp

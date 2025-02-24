@@ -2,9 +2,9 @@
 #define NOTEBOOK_H
 
 #include <QMainWindow>
-#include "../header_files/savepopup.h"
-#include "pugiXML/pugixml.hpp"
-#include "../header_files/noteSelector.h"
+#include "savepopup.h"
+#include "../../pugiXML/pugixml.hpp"
+#include "noteSelector.h"
 
 namespace Ui {
 class NoteBook;
@@ -16,7 +16,6 @@ class NoteBook : public QMainWindow
 
 public:
     explicit NoteBook(QWidget *parent);
-    void openFile();
     ~NoteBook();
 
 private:
@@ -31,6 +30,7 @@ private slots:
     void clearpressed();
     void backpressed();
     void openpressed();
+    void openFile(const std::string* t, const std::string* d, const std::string* c);
 };
 
 #endif // NOTEBOOK_H

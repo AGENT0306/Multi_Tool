@@ -2,7 +2,8 @@
 // Created by reitr on 1/9/2025.
 //
 #include "qdebug.h"
-#include "../header_files/noteSelector.h"
+#include "qapplication.h"
+#include "../header_files/notebook/noteSelector.h"
 #include <iostream>
 
 
@@ -33,7 +34,7 @@ void NoteSelector::loadNotes() {
         std::string content = entry.node().child("Content").text().as_string();
 
         DataCard* tmpData = new DataCard(title, date, content);
-        connect(tmpData, SIGNAL(released()), this, SLOT(notePressed()));
+        cards.push_back(tmpData);
         layout->addWidget(tmpData);
     }
 }

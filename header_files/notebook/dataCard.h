@@ -15,12 +15,15 @@ class DataCard : public QPushButton {
 
 public:
     explicit DataCard(std::string nT, std::string nD, std::string nC, QWidget *parent = nullptr);
+    const std::string *nTitle;
+    const std::string *nDate;
+    const std::string *nContent;
 
+signals:
+    void customRelease(const std::string* nT, const std::string* nD, const std::string* nC);
 
-private:
-    std::string *nTitle;
-    std::string *nDate;
-    std::string *nContent;
+private slots:
+    void onRelease();
 };
 
 #endif //DATACARD_H

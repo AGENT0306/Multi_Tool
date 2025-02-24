@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "../header_files/calc.h"
-#include "../header_files/notebook.h"
+#include "../header_files/calc/calc.h"
+#include "notebook/notebook.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

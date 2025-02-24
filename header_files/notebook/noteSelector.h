@@ -7,8 +7,8 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QScrollArea>
-#include "../header_files/dataCard.h"
-#include "pugiXML/pugixml.hpp"
+#include "dataCard.h"
+#include "../../pugiXML/pugixml.hpp"
 
 #ifndef NOTESELECTOR_H
 #define NOTESELECTOR_H
@@ -20,6 +20,7 @@ class NoteSelector : public QMainWindow{
     public:
         explicit NoteSelector(pugi::xml_document* d, QWidget *parent = nullptr);
         void loadNotes();
+        std::vector<DataCard*> cards;
 
     private:
         pugi::xml_document* doc;
@@ -27,6 +28,7 @@ class NoteSelector : public QMainWindow{
         QScrollArea* scroll;
         QWidget* w;
         QVBoxLayout* layout;
+
 
 private slots:
     void notePressed();

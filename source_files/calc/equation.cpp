@@ -1,4 +1,4 @@
-#include "../header_files/equation.h"
+#include "../../header_files/calc/equation.h"
 #include "QDebug"
 
 Equation::Equation()

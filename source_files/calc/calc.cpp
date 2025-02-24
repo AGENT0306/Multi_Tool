@@ -1,7 +1,7 @@
-#include "../header_files/calc.h"
+#include "../header_files/calc/calc.h"
 //#include "iostream"
 #include "./ui_calc.h"
-#include "../header_files/equation.h"
+#include "../header_files/calc/equation.h"
 using namespace std;
 
 double firstNum;

@@ -1,9 +1,8 @@
-#include "../header_files/notebook.h"
+#include "../header_files/notebook/notebook.h"
 #include "QDebug"
-#include "../source_files/ui_notebook.h"
+#include "ui_notebook.h"
 #include <fstream>
 #include <iostream>
-#include <iso646.h>
 #include <qstring.h>
 
 using namespace std;
@@ -19,6 +18,10 @@ NoteBook::NoteBook(QWidget *parent)
 
     noteSele = new NoteSelector(doc, this);
     noteSele->loadNotes();
+
+    for (DataCard* d: noteSele->cards){
+        connect(d, SIGNAL(customRelease(const std::string*,const std::string*,const std::string*)), this, SLOT(openFile(const std::string*,const std::string*,const std::string*)));
+    }
 
     mainWin = parent;
 
@@ -50,13 +53,12 @@ void NoteBook::backpressed()
 {
     mainWin->show();
     this->close();
-    //delete this; //will test if this actually deletes object later
 }
 
 void NoteBook::openpressed(){
     noteSele->show();
 }
 
-void NoteBook::openFile(){
-    std::cout << "test";
+void NoteBook::openFile(const std::string* t,const std::string* d,const std::string* c){
+    std::cout << *t << '\n' << *d << '\n' << *c << '\n';
 }

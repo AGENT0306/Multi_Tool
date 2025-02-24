@@ -19,21 +19,21 @@ set(PROJECT_SOURCES
         source_files/mainwindow.cpp
         header_files/mainwindow.h
         source_files/mainwindow.ui
-        header_files/calc.h
-        source_files/calc.cpp
-        source_files/calc.ui
-        source_files/notebook.ui
-        source_files/notebook.cpp
-        header_files/notebook.h
-        header_files/savepopup.h
-        source_files/savepopup.ui
-        source_files/savepopup.cpp
-        header_files/equation.h
-        source_files/equation.cpp
-        header_files/noteSelector.h
-        source_files/noteSelector.cpp
-        header_files/dataCard.h
-        source_files/dataCard.cpp
+        header_files/calc/calc.h
+        source_files/calc/calc.cpp
+        source_files/calc/calc.ui
+        source_files/notebook/notebook.ui
+        source_files/notebook/notebook.cpp
+        header_files/notebook/notebook.h
+        header_files/notebook/savepopup.h
+        source_files/notebook/savepopup.ui
+        source_files/notebook/savepopup.cpp
+        header_files/calc/equation.h
+        source_files/calc/equation.cpp
+        header_files/notebook/noteSelector.h
+        source_files/notebook/noteSelector.cpp
+        header_files/notebook/dataCard.h
+        source_files/notebook/dataCard.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

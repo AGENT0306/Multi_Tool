@@ -1,7 +1,7 @@
 //
 // Created by reitr on 1/11/2025.
 //
-#include "header_files/dataCard.h"
+#include "header_files/notebook/dataCard.h"
 
 #include <QLabel>
 
@@ -23,4 +23,10 @@ DataCard::DataCard(std::string nT, std::string nD, std::string nC, QWidget *pare
     lDate = new QLabel(this);
     lDate->setText(QString::fromStdString(*nDate));
     lDate->setGeometry(200,50,100,20);
+
+    connect(this, SIGNAL(released()), this, SLOT(onRelease()));
+}
+
+void DataCard::onRelease() {
+    emit customRelease(nTitle, nDate, nContent);
 }
